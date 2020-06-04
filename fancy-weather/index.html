@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Fancy weather</title>   
+</head>
+<body> 
+    <main>
+        <section class="all-content">
+            <section class="weather-content">
+                <header class="header">
+                    <div class="place-container">
+                        <h1 class="city">Wroclaw</h1>
+                        <h2 class="country">Poland</h2>
+                    </div>   
+                    <div class="time-container">                            
+                        <h2>Tue 2 june</h2>   
+                        <h2 class>10:00</h2>
+                    </div>
+                </header>
+
+                
+                <div class="temp-container">
+                    <span class="temperature">18</span>                       
+                        <ul class="weather-description">
+                            <li>
+                                <img class="wether-icon">
+                            </li>
+                            <li>Облачно</li>
+                            <li>Ощущается</li>
+                            <li>Ветер</li>
+                            <li>Влажность</li>                        
+                        </ul>                    
+                </div>
+
+                <section class="next-temperature">
+                    <div class="daily-temp">
+                        <h3>Понедельник</h3>
+                        <div class="day">
+                            <div class="day-temp">18&#730;</div>
+                            <div class="day-icon">солнечно</div>
+                        </div>
+                    </div>
+                    <div class="daily-temp">
+                        <h3>Понедельник</h3>
+                        <div class="day">
+                            <div class="day-temp">18&#730;</div>
+                            <div class="day-icon">солнечно</div>
+                        </div>
+                    </div>
+                    <div class="daily-temp">
+                        <h3>Понедельник</h3>
+                        <div class="day">
+                            <div class="day-temp">18&#730;</div>
+                            <div class="day-icon">солнечно</div>
+                        </div>
+                    </div>
+                </section> 
+            </section>
+
+            <aside class="aside">
+                <div class="search-container">
+                    <header class="aside-header">                    
+                        <button class="button"><i class="fas fa-sync-alt"></i></button>
+                        <div class="lang">
+                            <button class="button">EN</button>
+                            <button class="button">PL</button>
+                        </div>                        
+                        <div class="temp">                           
+                            <button class="button">&#176;C</button>
+                            <button class="button">&#176;F</button>
+                        </div>                    
+                </header>
+
+                <div class="search">
+                    <form action="/" method="POST" >
+                        <input class="input-field" type="text">
+                        <button class="button"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>                
+                </div>
+                
+
+                <div class="map">map</div>  
+                <div>
+                    <div class="location">
+                        <div>Широта</div>
+                        <div>464</div>
+                    </div>
+                    <div class="location">
+                        <div>Долгота</div>
+                        <div>464</div>
+                    </div>     
+                </div>          
+            </aside>     
+        </section>            
+    </main>
+   
+</body>
+<script src="https://kit.fontawesome.com/8ee5b3a33d.js" crossorigin="anonymous"></script>
+<script src="dist/main.js"></script>
+</html>

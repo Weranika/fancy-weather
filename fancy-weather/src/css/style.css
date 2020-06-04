@@ -1,0 +1,132 @@
+
+html {
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /*background: url(../img/rain4.jpg) no-repeat center center fixed;    */
+    background-size: cover;
+    color: #fff;
+    font: bold 3vh 'Montserrat', sans-serif;    
+}
+main {
+    height: 100%;    
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.all-content {
+    display: flex;
+    width: 100%;
+    height: 100%;    
+    justify-content: space-around;
+}
+.weather-content {
+    min-width: 50%;
+    height: 100%;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;        
+    flex-direction: column;    
+}
+.header {
+    display: flex;    
+    font-size: 5vh;
+    font-style: bold;
+    justify-content: space-around;
+}
+.place-container {
+    height: 15%;
+    width: 60%;    
+}
+.city {    
+    font-size: 7vh;
+}
+.temp-container {
+    display: flex;
+    justify-content: space-around;
+}
+.temperature {
+    font-size: 50vh;
+    text-align: center;
+    width: 60%;
+}
+.weather-description {
+    list-style-type: none;    
+    text-align: left;
+    font-size: 5vh;
+    padding-top: 3%;
+}
+.next-temperature {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.day {
+    display: flex;
+    justify-content: space-between;
+}
+/*************************************
+********aside************************/
+
+.aside {
+    justify-content: space-around;
+    display: flex;   
+    height: 100%;
+    align-content: space-between;       
+    flex-direction: column;    
+}
+.search-container{
+    height: 20%;
+    justify-content: space-around;
+    display: flex;  
+    flex-direction: column;    
+}
+ul {
+    padding-left: 0;
+}
+.aside-header {
+    display: flex;
+    text-align: center;   
+    font-size: 4vh;   
+}
+.lang {
+    display: flex;
+    margin: 0 15%;
+}
+div > button:first-child {
+    margin-right: 4%;    
+}
+.en {
+    margin-right: 5%;
+}
+.temp {
+    display: flex;
+}
+.celsius {
+    margin-right: 15%;
+}
+.button {
+    padding: 0.5vh 1.2vh;
+    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.button:hover {
+    background-color: rgba(252, 252, 252, 0.5);
+}
+.search {
+    max-height: 4vw;    
+}
+.input-field {
+    width: 18vw;    
+    height: 4vh;
+}
+.map {
+    height: 50%;
+}
+.location {
+    display: flex;
+    justify-content: flex-end;
+}
