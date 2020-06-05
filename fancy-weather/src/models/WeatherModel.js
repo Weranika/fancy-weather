@@ -17,11 +17,11 @@ export default class WeatherModel {
 
     static getWeather(data) {  
         return {
-            weatherText: data[0].WeatherText,
+            weatherText: (data[0].WeatherText).toUpperCase(),
             weatherIcon: data[0].WeatherIcon,
             dayTime: data[0].IsDayTime,
-            metricWalue: data[0].Temperature.Metric.Value,
-            realFeel: data[0].RealFeelTemperature.Metric.Value,
+            metricWalue: Math.round(data[0].Temperature.Metric.Value),
+            realFeel: Math.round(data[0].RealFeelTemperature.Metric.Value),
             humidity: data[0].RelativeHumidity,
             windSpeed: data[0].Wind.Speed.Metric.Value,
             windUnit: data[0].Wind.Speed.Metric.Unit
