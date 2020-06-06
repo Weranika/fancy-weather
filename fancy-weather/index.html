@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Fancy weather</title>   
 </head>
-<body> 
+<body id="body">
     <main>
         <section class="all-content">
             <section class="weather-content">
@@ -25,7 +27,7 @@
                 <div class="temp-container">
                     <div class="temperature" id="current-temperature"></div>                       
                     <div class="weather-description">
-                        <div><img src="" id="main-icon" title="weather image"/></div>
+                        <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
                         <div id="weather-text"></div>
                         <div class="weather-status">
                             <div>FEELS LIKE:</div><div id="real-feel"></div><div>&#730;</div>
@@ -41,24 +43,24 @@
 
                 <section class="next-temperature">
                     <div class="daily-temp">
-                        <h3 id="day-one"></h3>
+                        <h3 id="day-0"></h3>
                         <div class="day">
-                            <div class="day-temp" id="day-one-temp">18&#730;</div>
-                            <div class="day-icon" id="day-one-icon">солнечно</div>
+                            <div class="day-temp" id="day-0-temp"></div><div>&#730;</div>
+                            <div class="day-icon"><img src="" id="day-0-icon" title="weather image"/></div>
                         </div>
                     </div>
                     <div class="daily-temp">
-                        <h3 id="day-two"></h3>
+                        <h3 id="day-1"></h3>
                         <div class="day">
-                            <div class="day-temp" id="day-two-temp">18&#730;</div>
-                            <div class="day-icon" id="day-two-icon">солнечно</div>
+                            <div id="day-1-temp"></div><div>&#730;</div>
+                            <div class="day-icon"><img src="" id="day-1-icon" title="weather image"/></div>
                         </div>
                     </div>
                     <div class="daily-temp">
-                        <h3 id="day-three"></h3>
+                        <h3 id="day-2"></h3>
                         <div class="day">
-                            <div class="day-temp" id="day-three-temp">18&#730;</div>
-                            <div class="day-icon" id="day-three-icon">солнечно</div>
+                            <div id="day-2-temp"></div><div>&#730;</div>
+                            <div class="day-icon"><img src="" id="day-2-icon" title="weather image"/></div>
                         </div>
                     </div>
                 </section> 
@@ -90,19 +92,20 @@
                 <div class="map" id="map"></div>  
                 <div>
                     <div class="location">
-                        <div id="latitude-lang">Latitude</div>
+                        <div id="latitude-lang">Latitude:</div>
                         <div id="latitude"></div>
                     </div>
                     <div class="location">
-                        <div id="longitude-lang">Longitude</div>
+                        <div id="longitude-lang">Longitude:</div>
                         <div id="longitude"></div>
                     </div>     
                 </div>          
             </aside>     
         </section>            
-    </main>
-   
+    </main>   
 </body>
 <script src="https://kit.fontawesome.com/8ee5b3a33d.js" crossorigin="anonymous"></script>
 <script src="dist/main.js"></script>
+<script src="https://api-maps.yandex.ru/2.1?apikey=f52109d8-5ac5-4d8c-8b60-b48976f113e1&lang=en_US"
+  type="text/javascript"></script>
 </html>

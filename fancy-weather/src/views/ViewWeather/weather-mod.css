@@ -1,0 +1,16 @@
+.next-temperature {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.day {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16vh;
+}
+h3 {
+    font-size: 6vh;
+}
+div.weather-description > img {
+    width: 30vh;
+}

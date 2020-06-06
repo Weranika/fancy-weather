@@ -29,7 +29,7 @@ export default class WeatherModel {
     }
 
     async getFutureWeatherByKey(key) {        
-        const url = `${this.urlFutureWether}${this.locationKey}?apikey=${this.apiKeyWeather}&language=${this.lang}`;
+        const url = `${this.urlFutureWether}${this.locationKey}?apikey=${this.apiKeyWeather}&language=${this.lang}&metric=true`;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -42,6 +42,7 @@ export default class WeatherModel {
             arr.push({
                 DayTempMax: data.DailyForecasts[i].Temperature.Maximum.Value,
                 DayTempMin: data.DailyForecasts[i].Temperature.Minimum.Value,
+                DayEverege: Math.round((data.DailyForecasts[i].Temperature.Maximum.Value + data.DailyForecasts[i].Temperature.Minimum.Value) / 2),
                 Day: data.DailyForecasts[i].Date,
                 DayIcon: data.DailyForecasts[i].Day.Icon,
             });
