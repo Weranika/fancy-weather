@@ -1,37 +1,23 @@
-
-@media (max-width: 450px) {
-    .all-content {       
-        width: 100%;
-        height: 100%;         
-        display: block;   
+@media screen and (max-width: 991.98px) { 
+    h3 {
+        font-size: 25px;   
     }
-    .header {        
-        font-size: 5vw;
-        justify-content: flex-start;
-    }       
-    .weather-content {        
-        display: block;
-        height: initial;
+    .day {        
+        font-size: 50px;
     }
-  .temperature {
-    font-size: 35vh;    
+    .day-icon {
+        height: 60px;
     }
-    .temp-container {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .aside-header {        
-        width: 28%;    
-    }
-    .aside {        
-        box-sizing: border-box;
-        padding-left: 6vw;
+}
+@media (max-width: 768px) {
+    .map {
+        margin: 0 auto;
     }
     .input-field {
-        width: 28vw;    
-        height: 4vh;
+        width: 100px;          
     }
-    .location {        
-        justify-content: flex-start;
-    }
+}
+@media (max-width: 576px) {
+    
+
 }

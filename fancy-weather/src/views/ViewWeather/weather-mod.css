@@ -1,16 +1,37 @@
-.next-temperature {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.weather-description {
+    list-style-type: none;        
+    font-size: 4vh;    
 }
-.day {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16vh;
+.icon {
+    width: 30vh;   
 }
-h3 {
-    font-size: 6vh;
+.temperature {
+    font-size: 40vh;
+    text-align: center;    
+}
+.weather-status {
+    display: flex;
 }
 div.weather-description > img {
     width: 30vh;
+}
+.text-margin {
+    margin-right: 7px;
+}
+/*****section fo 3 days*******/
+
+.next-temperature {
+    text-align: center;
+}
+.day {
+    display: flex;    
+    font-size: 62px;
+    justify-content: center;
+}
+h3 {
+    font-size: 35px;
+    font-weight: bold;
+}
+.day-icon {
+    height: 80px;
 }

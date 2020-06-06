@@ -1,5 +1,37 @@
 .map {
     height: 60vh;
     width: 80%;    
-    border-radius: 8%;
+    border-radius: 8%;    
+}
+.search-container{
+   justify-content: center;
+   margin: 2%;
+}
+.input-field {
+    width: 200px;
+    height: 5vh;
+    border-radius: 5px;
+}
+.button {
+    padding: 0.6vh 1.2vh;
+    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 3px;
+}
+.button:hover {
+    background-color: rgba(252, 252, 252, 0.3);
+    box-shadow:0 0 15px rgb(117, 113, 113);
+}
+div > button:first-child {
+    margin-right: 4%;    
+}
+.lang {    
+    margin: 0 5%;
+}
+.temp, .location, .lang {
+    display: flex;
+}
+div.location div:first-child {
+    padding-right: 13px;
 }

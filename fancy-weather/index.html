@@ -9,66 +9,21 @@
     <title>Fancy weather</title>   
 </head>
 <body id="body">
-    <main>
-        <section class="all-content">
-            <section class="weather-content">
-                <header class="header" id="weather-container-header">
-                    <div class="place-container">
-                        <h1 class="city" id="city"></h1>
-                        <h2 class="country" id="country"></h2>
-                    </div>   
-                    <div class="time-container">      
-                        <h2 id="time" class="time"></h2>
-                        <h2 id="date"></h2>   
-                    </div>
-                </header>
+    <header>
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-md-4 col-sm-12">           
+                    <h1 class="city" id="city"></h1>
+                    <h2 class="country" id="country"></h2>
+                </div>  
 
-                
-                <div class="temp-container">
-                    <div class="temperature" id="current-temperature"></div>                       
-                    <div class="weather-description">
-                        <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
-                        <div id="weather-text"></div>
-                        <div class="weather-status">
-                            <div>FEELS LIKE:</div><div id="real-feel"></div><div>&#730;</div>
-                        </div>
-                        <div class="weather-status">
-                            <div>WIND:</div><div id="wind-speed"></div><div id="wind-unit"></div>
-                        </div>
-                        <div class="weather-status">
-                            <div>HUMIDITY:</div><div id="humidity"></div><div>%</div>
-                        </div>   
-                    </div>                    
+                <div class="col-md-4 col-sm-12 time-container">      
+                    <h2 id="time" class="time"></h2>
+                    <h2 id="date"></h2>   
                 </div>
 
-                <section class="next-temperature">
-                    <div class="daily-temp">
-                        <h3 id="day-0"></h3>
-                        <div class="day">
-                            <div class="day-temp" id="day-0-temp"></div><div>&#730;</div>
-                            <div class="day-icon"><img src="" id="day-0-icon" title="weather image"/></div>
-                        </div>
-                    </div>
-                    <div class="daily-temp">
-                        <h3 id="day-1"></h3>
-                        <div class="day">
-                            <div id="day-1-temp"></div><div>&#730;</div>
-                            <div class="day-icon"><img src="" id="day-1-icon" title="weather image"/></div>
-                        </div>
-                    </div>
-                    <div class="daily-temp">
-                        <h3 id="day-2"></h3>
-                        <div class="day">
-                            <div id="day-2-temp"></div><div>&#730;</div>
-                            <div class="day-icon"><img src="" id="day-2-icon" title="weather image"/></div>
-                        </div>
-                    </div>
-                </section> 
-            </section>
-
-            <aside class="aside">
-                <div class="search-container">
-                    <header class="aside-header" id="aside-header">                    
+                <div class="col-md-4 col-sm-12">
+                    <div class="row search-container">
                         <button class="button" id="button-backgr"><i class="fas fa-sync-alt"></i></button>
                         <div class="lang">
                             <button class="button" id="butt-en">EN</button>
@@ -77,19 +32,66 @@
                         <div class="temp">                           
                             <button class="button" id="temp-cels">&#176;C</button>
                             <button class="button" id="temp-far">&#176;F</button>
-                        </div>                    
-                </header>
+                        </div>
+                    </div>  
+                    <div class="container search">
+                        <form action="/" method="POST" >
+                            <input class="input-field" type="text" id="search">
+                            <button class="button" id="button-search"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>             
+                </div>                    
+            </div>
+        </div>        
+    </header>
 
-                <div class="search">
-                    <form action="/" method="POST" >
-                        <input class="input-field" type="text" id="search">
-                        <button class="button" id="button-search"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>                
+    <main class="container-md-12">        
+        <div class="all-content row">
+            <section class="col-md-8 col-sm-12">
+                <div class="row">
+                    <div class="col-7 temperature" id="current-temperature"></div>                       
+                    <div class="col-5 weather-description">
+                        <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
+                        <div id="weather-text"></div>
+                        <div class="weather-status">
+                            <div class="text-margin">FEELS LIKE:</div><div id="real-feel"></div><div>&#730;</div>
+                        </div>
+                        <div class="weather-status">
+                            <div class="text-margin">WIND:</div><div id="wind-speed" class="text-margin"></div><div id="wind-unit"></div>
+                        </div>
+                        <div class="weather-status">
+                            <div class="text-margin">HUMIDITY:</div><div id="humidity"></div><div>%</div>
+                        </div>   
+                    </div>                    
                 </div>
-                
 
-                <div class="map" id="map"></div>  
+                <section class="row next-temperature">
+                    <div class="col-md-4 daily-temp">
+                        <h3 id="day-0"></h3>
+                        <div class="day">
+                            <div class="day-temp" id="day-0-temp"></div><div>&#730;</div>
+                            <div ><img class="day-icon" src="" id="day-0-icon" title="weather image"/></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 daily-temp">
+                        <h3 id="day-1"></h3>
+                        <div class="day">
+                            <div id="day-1-temp"></div><div>&#730;</div>
+                            <div><img class="day-icon" src="" id="day-1-icon" title="weather image"/></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 daily-temp">
+                        <h3 id="day-2"></h3>
+                        <div class="day">
+                            <div id="day-2-temp"></div><div>&#730;</div>
+                            <div><img class="day-icon" src="" id="day-2-icon" title="weather image"/></div>
+                        </div>
+                    </div>
+                </section> 
+            </section>
+
+            <aside class="col-md-4 col-sm-12 aside">
+                <div class="map" id="map"></div>
                 <div>
                     <div class="location">
                         <div id="latitude-lang">Latitude:</div>
@@ -101,7 +103,7 @@
                     </div>     
                 </div>          
             </aside>     
-        </section>            
+        </div>            
     </main>   
 </body>
 <script src="https://kit.fontawesome.com/8ee5b3a33d.js" crossorigin="anonymous"></script>
