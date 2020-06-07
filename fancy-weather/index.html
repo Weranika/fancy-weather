@@ -12,17 +12,17 @@
     <header>
         <div class="container-fluid">
             <div class="row header">
-                <div class="col-md-4 col-sm-12">           
+                <div class="col-12 col-lg-4">           
                     <h1 class="city" id="city"></h1>
                     <h2 class="country" id="country"></h2>
                 </div>  
 
-                <div class="col-md-4 col-sm-12 time-container">      
+                <div class="col-12 col-lg-4 time-container">      
                     <h2 id="time" class="time"></h2>
                     <h2 id="date"></h2>   
                 </div>
 
-                <div class="col-md-4 col-sm-12">
+                <div class="col-12 col-lg-4">
                     <div class="row search-container">
                         <button class="button" id="button-backgr"><i class="fas fa-sync-alt"></i></button>
                         <div class="lang">
@@ -47,10 +47,10 @@
 
     <main class="container-md-12">        
         <div class="all-content row">
-            <section class="col-md-8 col-sm-12">
-                <div class="row">
-                    <div class="col-7 temperature" id="current-temperature"></div>                       
-                    <div class="col-5 weather-description">
+            <section class="col-lg-8 col-md-12">
+                <div class="row temp-disc">
+                    <div class="col-lg-7 col-5 temperature" id="current-temperature"></div>                       
+                    <div class="col-lg-5 col-5 weather-description">
                         <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
                         <div id="weather-text"></div>
                         <div class="weather-status">
@@ -90,7 +90,7 @@
                 </section> 
             </section>
 
-            <aside class="col-md-4 col-sm-12 aside">
+            <aside class="col-lg-4 col-md-12 aside">
                 <div class="map" id="map"></div>
                 <div>
                     <div class="location">
@@ -107,7 +107,7 @@
     </main>   
 </body>
 <script src="https://kit.fontawesome.com/8ee5b3a33d.js" crossorigin="anonymous"></script>
-<script src="dist/main.js"></script>
+
 <script src="https://api-maps.yandex.ru/2.1?apikey=f52109d8-5ac5-4d8c-8b60-b48976f113e1&lang=en_US"
   type="text/javascript"></script>
 </html>

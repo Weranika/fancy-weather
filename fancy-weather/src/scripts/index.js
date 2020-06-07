@@ -1,6 +1,6 @@
-import '../css/reset.css';
-import '../css/style.css';
 import '../css/style_query.css';
+import '../css/reset.css';
+
 import App from "../controllers/App";
 
 

@@ -9,11 +9,13 @@ body {
     width: 100%;
     height: 100%;
     margin: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgb(0, 0, 0)), url(../../img/overcast_4.jpg);
-    background-repeat:  no-repeat;   
-    background-size: 100% 100vh;
+    background: linear-gradient(rgba(8, 26, 25, 0.4) 0%,rgba(17, 17, 17, 0.4) 100%)
+    center center / cover fixed, url(../../img/overcast_4.jpg) no-repeat fixed;
+    background-attachment: fixed;  
+    background-size: cover;   
     color: #fff;
     font: bold 3vh 'Montserrat', sans-serif;    
+    padding: 10px;
 }
 .header {    
     font-size: 5vh;
@@ -25,4 +27,31 @@ body {
 }
 .city {    
     font-size: 10vh;
+}
+
+
+@media screen and (max-width: 991.98px) { 
+    body {
+        padding: 10px;
+    }
+    h3 {
+        font-size: 25px;   
+    }
+    .day {        
+        font-size: 45px;
+    }
+    .day-icon {
+        height: 60px;
+    }
+    .all-content {
+        padding-top: 4%;
+    }
+}
+@media (max-width: 576px) {
+    .temperature {
+        font-size: 20vh;        
+    }
+    .city {    
+        font-size: 6vh;
+    }    
 }

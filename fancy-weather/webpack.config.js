@@ -15,11 +15,7 @@ module.exports = {
   devtool: 'source-map',
   module: {
     rules: [
-      { enforce: 'pre', test: /\.js$/ },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/        
-      }, 
+      // { enforce: 'pre', test: /\.js$/ }, 
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [

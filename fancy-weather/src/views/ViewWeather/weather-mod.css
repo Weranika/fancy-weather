@@ -35,3 +35,72 @@ h3 {
 .day-icon {
     height: 80px;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) { 
+    h3 {
+        font-size: 25px;   
+    }
+    .day {        
+        font-size: 45px;
+    }
+    .day-icon {
+        height: 60px;
+    }   
+    .weather-description {
+        list-style-type: none;
+        font-size: 30px;
+    }
+    .temperature {
+        font-size: 30vw;        
+    }
+    .next-temperature {
+        margin: 5% auto;
+    }
+    .temp-disc {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {     
+    .temperature {
+        font-size: 25vw;        
+    }
+    .weather-description {       
+        font-size: 22px;
+    }    
+    .daily-temp {
+        margin: 5% 17%;    
+        border-radius: 35px;
+        box-shadow: 0 0 34px rgb(144, 136, 136);
+    }     
+    .temp-disc {
+        justify-content: center;
+    }
+    .icon {
+        width: 20vh;
+    }
+ }
+@media (max-width: 576px) {
+
+    .temp-disc {
+        justify-content: center;       
+    }
+    .temperature {
+        font-size: 22vw;   
+    }
+    .daily-temp {
+        margin: 5% 17%;    
+        border-radius: 35px;
+        box-shadow: 0 0 34px rgb(144, 136, 136);
+    }     
+    .weather-description {       
+        font-size: 16px;
+    }    
+    .icon {
+        width: 15vh;
+    }
+    .col-md-4 {
+        padding: 0;
+    }
+}
+
+

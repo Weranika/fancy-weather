@@ -6,7 +6,7 @@ import ViewMap from "../views/ViewMap";
 
 export default class App {
     constructor() {       
-        this.apiKeyWeather = 'tlagAQvlr2CAxiswgZLb4UPe2JI26L84'; //2nd apik tlagAQvlr2CAxiswgZLb4UPe2JI26L84  3d rWbX9EGcJwL0CJbKGCh2zQqOksA9ETj0
+        this.apiKeyWeather = 'TXaSpFqw5hyd8SforaGzlbvPqbQNRppX'; //2nd apik tlagAQvlr2CAxiswgZLb4UPe2JI26L84  3d rWbX9EGcJwL0CJbKGCh2zQqOksA9ETj0
         this.lang = 'pl'; //TXaSpFqw5hyd8SforaGzlbvPqbQNRppX
     }
 
