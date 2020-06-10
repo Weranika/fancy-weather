@@ -3,8 +3,10 @@ export default class ViewMap {
         this.locationData = locationData;           
     }
 
-    render() {        
-        const map = new ymaps.Map(document.getElementById('map'), {
+    render() { 
+        const mapConyeiner = document.getElementById('map');
+        mapConyeiner.innerHTML = '';
+        const map = new ymaps.Map(mapConyeiner, {
             center: [this.locationData.latitude, this.locationData.longitude], 
             zoom: 10
           });       

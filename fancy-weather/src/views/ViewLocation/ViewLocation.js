@@ -1,21 +1,15 @@
 export default class ViewLocationModel {
-    constructor(locationInfo, lang) {
+    constructor(locationInfo, lang, city) {
         this.locationInfo = locationInfo;
         this.lang = lang;
+        this.city = city;
     }
 
     render() {
-        const city = document.getElementById("city");
-        city.innerHTML = this.locationInfo.city;
-
-        const country = document.getElementById("country");
-        country.innerHTML = this.locationInfo.country;
-
-        const latitude = document.getElementById("latitude");
-        latitude.innerHTML = this.locationInfo.latitude;
-
-        const longitude = document.getElementById("longitude");
-        longitude.innerHTML = this.locationInfo.longitude;
+        document.getElementById("city").innerHTML = this.locationInfo.city;
+        document.getElementById("country").innerHTML = this.locationInfo.country;
+        document.getElementById("latitude"). innerHTML = this.locationInfo.latitude;
+        document.getElementById("longitude").innerHTML = this.locationInfo.longitude;
 
         let date = new Date();
         const time = {
@@ -27,16 +21,22 @@ export default class ViewLocationModel {
             day: 'numeric',    
             month: 'long'
           };          
-        const timeSet = document.getElementById("time");               
-        timeSet.innerHTML =  date.toLocaleString(this.lang, time);
-       
-        const dateSet = document.getElementById("date");               
-        dateSet.innerHTML =  date.toLocaleString(this.lang, dateItems);
+        document.getElementById("time").innerHTML =  date.toLocaleString(this.lang, time);       
+        document.getElementById("date").innerHTML =  date.toLocaleString(this.lang, dateItems);
+    }
 
+    searchCity() {
+      const buttonSearch = document.getElementById('button-search');            
+      buttonSearch.addEventListener('click', this.searchListener);
+    }
+    
+    searchListener() {
+      if (this.city == null) {
+        alert("Please fill searh field");
+      }
+      else {
 
-
-
-
+      }
     }
 
 }

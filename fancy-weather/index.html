@@ -26,11 +26,11 @@
                     <div class="row search-container">
                         <button class="button" id="button-backgr"><i class="fas fa-sync-alt"></i></button>
                         <div class="lang">
-                            <button class="button" id="butt-en">EN</button>
+                            <button class="button active" id="butt-en">EN</button>
                             <button class="button" id="butt-pl">PL</button>
                         </div>                        
                         <div class="temp">                           
-                            <button class="button" id="temp-cels">&#176;C</button>
+                            <button class="button active" id="temp-cels">&#176;C</button>
                             <button class="button" id="temp-far">&#176;F</button>
                         </div>
                     </div>  
@@ -50,43 +50,22 @@
             <section class="col-lg-8 col-md-12">
                 <div class="row temp-disc">
                     <div class="col-lg-7 col-5 temperature" id="current-temperature"></div>                       
-                    <div class="col-lg-5 col-5 weather-description">
-                        <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
+                    <div class="col-lg-5 col-5 weather-description" id="weather-description">
+                        <!-- <div><img class="icon" src="" id="main-icon" title="weather image"/></div>
                         <div id="weather-text"></div>
                         <div class="weather-status">
-                            <div class="text-margin">FEELS LIKE:</div><div id="real-feel"></div><div>&#730;</div>
+                            <div class="text-margin" data-i18n="feels">FEELS LIKE:</div><div id="real-feel"></div><div>&#730;</div>
                         </div>
                         <div class="weather-status">
-                            <div class="text-margin">WIND:</div><div id="wind-speed" class="text-margin"></div><div id="wind-unit"></div>
+                            <div class="text-margin" data-i18n="wind">WIND:</div><div id="wind-speed" class="text-margin"></div><div id="wind-unit"></div>
                         </div>
                         <div class="weather-status">
-                            <div class="text-margin">HUMIDITY:</div><div id="humidity"></div><div>%</div>
-                        </div>   
+                            <div class="text-margin" data-i18n="humidity">HUMIDITY:</div><div id="humidity"></div><div>%</div>
+                        </div>    -->
                     </div>                    
                 </div>
 
-                <section class="row next-temperature">
-                    <div class="col-md-4 daily-temp">
-                        <h3 id="day-0"></h3>
-                        <div class="day">
-                            <div class="day-temp" id="day-0-temp"></div><div>&#730;</div>
-                            <div ><img class="day-icon" src="" id="day-0-icon" title="weather image"/></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 daily-temp">
-                        <h3 id="day-1"></h3>
-                        <div class="day">
-                            <div id="day-1-temp"></div><div>&#730;</div>
-                            <div><img class="day-icon" src="" id="day-1-icon" title="weather image"/></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 daily-temp">
-                        <h3 id="day-2"></h3>
-                        <div class="day">
-                            <div id="day-2-temp"></div><div>&#730;</div>
-                            <div><img class="day-icon" src="" id="day-2-icon" title="weather image"/></div>
-                        </div>
-                    </div>
+                <section class="row next-temperature" id="next-temperature">                    
                 </section> 
             </section>
 
@@ -94,11 +73,11 @@
                 <div class="map" id="map"></div>
                 <div>
                     <div class="location">
-                        <div id="latitude-lang">Latitude:</div>
+                        <div id="latitude-lang" data-i18n="latitude">Latitude:</div>
                         <div id="latitude"></div>
                     </div>
                     <div class="location">
-                        <div id="longitude-lang">Longitude:</div>
+                        <div id="longitude-lang" data-i18n="longitude">Longitude:</div>
                         <div id="longitude"></div>
                     </div>     
                 </div>          
