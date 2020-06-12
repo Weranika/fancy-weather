@@ -1,20 +1,14 @@
-import langEn from './langEn';
-import langPl from './langPl';
 import { app } from './index';
 
-export default class ButtonsLang {
-    constructor() {
-        this
+export default class ButtonsLanguage {
+    constructor() {        
         this.pl = document.getElementById('butt-pl');
-        this.en = document.getElementById('butt-en');
-        this.langEn = langEn;
-        this.langPl = langPl;        
+        this.en = document.getElementById('butt-en');           
         this.pl.addEventListener('click', this.translate.bind(this));
         this.en.addEventListener('click', this.translate.bind(this));
     }
 
-    translate(event) {          
-        const elementsToTranslate = document.querySelectorAll('[data-i18n]');        
+    translate(event) {                  
         if (event.currentTarget.id === "butt-pl") {            
             event.currentTarget.classList.add("active");
             this.en.classList.remove('active');
@@ -31,4 +25,4 @@ export default class ButtonsLang {
         }        
     }
 }
-const buttonsLang = new ButtonsLang();      
+const buttonsLang = new ButtonsLanguage();      

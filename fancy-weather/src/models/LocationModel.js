@@ -1,32 +1,40 @@
 export default class LocationModel {
     constructor(lang, apiKeyWeather) {
         this.state = {
-            urlIp: 'https://api.ipify.org/?format=json',
+            urlIp: 'https://ipapi.co/json/',
             urlLocationKey: 'http://dataservice.accuweather.com/locations/v1/cities/ipaddress',    
             urlLocationData: 'http://dataservice.accuweather.com/locations/v1/',
             urlByName: 'http://dataservice.accuweather.com/locations/v1/cities/search' 
         };
         this.lang = lang;
-        this.apiKeyWeather = apiKeyWeather;
+        this.apiKeyWeather = apiKeyWeather;        
+    }    
+
+    async getipAdress() {
+        const { urlIp } = this.state;
+        const response = await fetch(urlIp);
+        if (response.status !== 200) {  
+           alert('Looks like there was a problem with server. Status Code: ' +  
+              response.status);  
+            return;  
+        }
+        const data = await response.json();
+        return LocationModel.ipAdress(data);
     }
 
     static ipAdress(data) {
         return data.ip;
     }
 
-    async getipAdress() {
-        const { urlIp } = this.state;
-        const response = await fetch(urlIp);
-        const data = await response.json();
-
-        return LocationModel.ipAdress(data);
-    }
-
     async getLocationByIp(ip) {        
         const url = `${this.state.urlLocationKey}?apikey=${this.apiKeyWeather}&q=${ip}&language=${this.lang}&details=true`;
         const response = await fetch(url);
+        if (response.status !== 200) {  
+            alert('Looks like there was a problem with server. Status Code: ' +  
+               response.status);  
+             return;  
+        }
         const data = await response.json();
-
         return LocationModel.getLocationKey(data);
     }
 
@@ -39,8 +47,12 @@ export default class LocationModel {
     async getLocationByKey(key) {        
         const url = `${this.state.urlLocationData}${key}?apikey=${this.apiKeyWeather}&language=${this.lang}`;
         const response = await fetch(url);
+        if (response.status !== 200) {  
+            alert('Looks like there was a problem with server. Status Code: ' +  
+               response.status);  
+             return;  
+        }
         const data = await response.json();
-
         return LocationModel.getLocationData(data);
     }
 
@@ -51,21 +63,26 @@ export default class LocationModel {
             latitude: data.GeoPosition.Latitude,
             longitude: data.GeoPosition.Longitude
         }
-    }
+    }    
 
-    async getCity(city) {        
-        const url = `${this.urlByName}?apikey=${this.apiKeyWeather}&q=${city}&language=${this.lang}`;
-        const response = await fetch(url);
+    async getLocationByCity(city) {        
+        const url = `${this.state.urlByName}?apikey=${this.apiKeyWeather}&q=${city}&language=${this.lang}`;
+        const response = await fetch(url); 
+        console.log(response);
+        
+        if (response.status !== 200) {  
+            alert('Looks like there was a problem with server. Status Code: ' +  
+               response.status);  
+             return;  
+        }
         const data = await response.json();
-
+        console.log(data);
         return LocationModel.getKeyByCity(data);
     }
 
     static getKeyByCity(data) {
         return {
-            key: data.Key
+            key: data[0].ParentCity.Key
         }
-    }
-
-    
+    }        
 }   

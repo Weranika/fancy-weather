@@ -1,14 +1,14 @@
-// export default class ViewMap {
-//     constructor() {
-//         this.locationData = locationData;           
-//     }
+export default class ViewBackgr {
+    constructor() {        
+        
+        this.bacgrButton = document.getElementById('button-backgr');                 
+        this.bacgrButton.addEventListener('click', this.changeBackgr);       
+    }
 
-//     https://api.unsplash.com/photos/?client_id=TDAj0p3kl8fu9c6zjCknKIleuOKDfIdIw9W5aF9Evn4
-// import fetch from 'node-fetch';
-// global.fetch = fetch;
+    changeBackgr(event) { 
+        const body = document.getElementById('body');      
+        const random = Math.floor(Math.random() * 5) + 1;
+        body.setAttribute("style", `background: url(../../src/img/${random}.jpg) no-repeat fixed; background-attachment: fixed; background-size: cover;`);
+    }        
+}
 
-// unsplash.search.photos(this.locationData.city, { orientation: "landscape" })
-//   .then(toJson)
-//   .then(json => {
-//     document.getElementById("body");
-//   });

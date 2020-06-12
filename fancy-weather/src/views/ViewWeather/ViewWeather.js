@@ -1,22 +1,27 @@
-import langEn from '../../scripts/langEn.js';
-import langPl from '../../scripts/langPl.js';
+import langEn from '../../scripts/lang/langEn.js';
+import langPl from '../../scripts/lang/langPl.js';
 
 export default class ViewWeather {
-    constructor(currentWeather, futureWeather, weatherIcon, lang) {
+    constructor(currentWeather, futureWeather, weatherIcon, lang, temperature) {
         this.currentWeather = currentWeather;
         this.futureWeather = futureWeather;
         this.weatherIcon = weatherIcon;
         this.lang = lang;
+        this.temperature = temperature;
 
         if (this.lang === 'en') {
             this.dictionary = langEn;
         } else {
             this.dictionary = langPl;
-        }     
+        }             
     }
 
     render() {
-        console.log('weather render');
+        if (this.temperature === 'true') {
+            document.getElementById("current-temperature").innerHTML = this.currentWeather.metricWalue;        
+        } else {
+            document.getElementById("current-temperature").innerHTML = this.currentWeather.metricImperial;
+        }        
         const weatherDescription = document.getElementById("weather-description");
         const tempForTreeDays = document.getElementById('next-temperature');        
         weatherDescription.innerHTML = '';
@@ -42,9 +47,12 @@ export default class ViewWeather {
         weatherStatusFeel.appendChild(realFeelText);
 
         const realFeel= document.createElement('div');  
-        realFeel.innerHTML = this.currentWeather.realFeel + '&#730;';        
+        if (this.temperature === 'true') {
+            realFeel.innerHTML = this.currentWeather.realFeel + '&#730;';        
+        } else {
+            realFeel.innerHTML = this.currentWeather.realFeelImperial + '&#730;'; 
+        }                
         weatherStatusFeel.appendChild(realFeel);
-
 
         const weatherStatusWind= document.createElement('div');  
         weatherStatusWind.classList.add("weather-status");
@@ -80,9 +88,7 @@ export default class ViewWeather {
         weatherDescription.appendChild(weatherText);
         weatherDescription.appendChild(weatherStatusFeel);
         weatherDescription.appendChild(weatherStatusWind);
-        weatherDescription.appendChild(weatherStatusHumidity);
-
-        document.getElementById("current-temperature").innerHTML = this.currentWeather.metricWalue;             
+        weatherDescription.appendChild(weatherStatusHumidity);            
 
         const dateItem = {
             weekday: 'long'

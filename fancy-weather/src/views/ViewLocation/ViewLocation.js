@@ -1,4 +1,4 @@
-export default class ViewLocationModel {
+export default class ViewLocation {
     constructor(locationInfo, lang, city) {
         this.locationInfo = locationInfo;
         this.lang = lang;
@@ -8,9 +8,7 @@ export default class ViewLocationModel {
     render() {
         document.getElementById("city").innerHTML = this.locationInfo.city;
         document.getElementById("country").innerHTML = this.locationInfo.country;
-        document.getElementById("latitude"). innerHTML = this.locationInfo.latitude;
-        document.getElementById("longitude").innerHTML = this.locationInfo.longitude;
-
+        
         let date = new Date();
         const time = {
             hour: 'numeric',

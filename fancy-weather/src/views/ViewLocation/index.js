@@ -1,7 +1,7 @@
 import ViewLocation from './ViewLocation';
 
 import './location-mod.css';
-import '../../img/overcast_4.jpg';
+import '../../img/1.jpg';
 import '../../img/icons/1-s.png';
 import '../../img/icons/2-s.png';
 import '../../img/icons/3-s.png';

@@ -54,6 +54,12 @@ div.location div:first-child {
     .map {
         margin: 4% auto;
     }
+    .search {
+        text-align: center;
+    }
+    .search-container{  
+        justify-content: center;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     
@@ -65,6 +71,12 @@ div.location div:first-child {
     }
     .map {
         margin: 4% auto;
+    }
+    .search {
+        text-align: center;
+    }
+    .search-container{  
+        justify-content: center;
     }
  }
  @media (max-width: 576px) {
@@ -95,6 +107,11 @@ div.location div:first-child {
         color: #fff;
         border-radius: 3px;
     }
-
+    .search {
+        text-align: center;
+    }
+    .search-container{  
+        justify-content: center;
+    }
 }
 

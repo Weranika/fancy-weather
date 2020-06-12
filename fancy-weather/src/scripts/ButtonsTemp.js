@@ -1,30 +1,27 @@
+import { app } from "./index";
+
 export default class ButtonsTemp {
-    constructor(currentWeather, futureWeather) {
-        this.currentWeather = currentWeather;
-        this.futureWeather = futureWeather;
+    constructor() {
         this.cels = document.getElementById('temp-cels');        
         this.far = document.getElementById('temp-far');          
         this.cels.addEventListener('click', this.temperatureToggle.bind(this));
         this.far.addEventListener('click', this.temperatureToggle.bind(this));       
     }
 
-    temperatureToggle(event) {  
-        if (event.currentTarget.id === "temp-cels") {     
-            document.getElementById("current-temperature").innerHTML = this.currentWeather.metricWalue;
-            for (let i = 0; i < this.futureWeather.length; i++) { 
-                document.getElementsByClassName("day-temp")[i].innerHTML = this.futureWeather[i].DayEverege;
-            };
+    temperatureToggle(event) {      
+        if (event.currentTarget.id === "temp-cels") {  
             event.currentTarget.classList.add("active");
             this.far.classList.remove('active');
+            this.temperature = 'true';
+            app.setTemp(this.temperature);
+            app.start();
             }        
-        else {     
-            document.getElementById("current-temperature").innerHTML = Math.round((this.currentWeather.metricWalue * (9/5) + 32));
-            for (let i = 0; i < this.futureWeather.length; i++) {
-                document.getElementsByClassName("day-temp")[i].innerHTML = Math.round((this.futureWeather[i].DayEverege * (9/5) + 32));
-            };
+        else { 
             event.currentTarget.classList.add("active");
-            this.cels.classList.remove('active');           
+            this.cels.classList.remove('active');
+            this.temperature = 'false';
+            app.setTemp(this.temperature);
+            app.start();  
         }
     }   
 }
-
