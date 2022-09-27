@@ -14,8 +14,8 @@ export default class LocationModel {
         const { urlIp } = this.state;
         const response = await fetch(urlIp);
         if (response.status !== 200) {  
-           alert('Looks like there was a problem with server. Status Code: ' + 
-              response.status);
+            alert('Looks like there was a problem with server. Status Code: ' + 
+                response.status);
             return;
         }
         const data = await response.json();
@@ -31,8 +31,8 @@ export default class LocationModel {
         const response = await fetch(url);
         if (response.status !== 200) {  
             alert('Looks like there was a problem with server. Status Code: ' +  
-               response.status);  
-             return;  
+                response.status);  
+            return;
         }
         const data = await response.json();
         return LocationModel.getLocationKey(data);
@@ -49,8 +49,8 @@ export default class LocationModel {
         const response = await fetch(url);
         if (response.status !== 200) {
             alert('Looks like there was a problem with server. Status Code: ' + 
-               response.status);
-             return;
+                response.status);
+            return;
         }
         const data = await response.json();
         return LocationModel.getLocationData(data);
@@ -72,8 +72,8 @@ export default class LocationModel {
         
         if (response.status !== 200) {  
             alert('Looks like there was a problem with server. Status Code: ' +  
-               response.status);  
-             return;  
+                response.status);  
+            return;  
         }
         const data = await response.json();
         console.log(data);
