@@ -1,7 +1,7 @@
 export default class WeatherModel {
     constructor(lang, apiKeyWeather, locationKey, temperature) {
-        this.urlWether = 'http://dataservice.accuweather.com/currentconditions/v1/';
-        this.urlFutureWether = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';        
+        this.urlWether = 'https://dataservice.accuweather.com/currentconditions/v1/';
+        this.urlFutureWether = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/';        
         this.lang = lang;
         this.apiKeyWeather = apiKeyWeather;
         this.locationKey = locationKey;
