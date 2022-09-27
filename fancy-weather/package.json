@@ -5,8 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development -w",
-    "build": "webpack --mode development -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ../fancy-weather/dist -e fancy-weather"
   },
   "author": "Weranika Lapanawa",
   "license": "ISC",
@@ -23,5 +24,8 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
