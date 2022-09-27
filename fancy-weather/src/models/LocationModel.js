@@ -35,11 +35,6 @@ export default class LocationModel {
             return;
         }
         const data = await response.json();
-
-        if (data[0] === undefined) {
-            alert('Looks like you write smth wrong');
-        }
-        
         return LocationModel.getLocationKey(data);
     }
 
