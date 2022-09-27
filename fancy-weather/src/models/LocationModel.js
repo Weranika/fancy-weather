@@ -2,21 +2,21 @@ export default class LocationModel {
     constructor(lang, apiKeyWeather) {
         this.state = {
             urlIp: 'https://ipapi.co/json/',
-            urlLocationKey: 'http://dataservice.accuweather.com/locations/v1/cities/ipaddress',    
-            urlLocationData: 'http://dataservice.accuweather.com/locations/v1/',
-            urlByName: 'http://dataservice.accuweather.com/locations/v1/cities/search' 
+            urlLocationKey: 'https://dataservice.accuweather.com/locations/v1/cities/ipaddress',    
+            urlLocationData: 'https://dataservice.accuweather.com/locations/v1/',
+            urlByName: 'https://dataservice.accuweather.com/locations/v1/cities/search' 
         };
         this.lang = lang;
-        this.apiKeyWeather = apiKeyWeather;        
-    }    
+        this.apiKeyWeather = apiKeyWeather;
+    }
 
     async getipAdress() {
         const { urlIp } = this.state;
         const response = await fetch(urlIp);
         if (response.status !== 200) {  
-           alert('Looks like there was a problem with server. Status Code: ' +  
-              response.status);  
-            return;  
+           alert('Looks like there was a problem with server. Status Code: ' + 
+              response.status);
+            return;
         }
         const data = await response.json();
         return LocationModel.ipAdress(data);
@@ -44,13 +44,13 @@ export default class LocationModel {
         }
     }
 
-    async getLocationByKey(key) {        
+    async getLocationByKey(key) {
         const url = `${this.state.urlLocationData}${key}?apikey=${this.apiKeyWeather}&language=${this.lang}`;
         const response = await fetch(url);
-        if (response.status !== 200) {  
-            alert('Looks like there was a problem with server. Status Code: ' +  
-               response.status);  
-             return;  
+        if (response.status !== 200) {
+            alert('Looks like there was a problem with server. Status Code: ' + 
+               response.status);
+             return;
         }
         const data = await response.json();
         return LocationModel.getLocationData(data);
@@ -84,5 +84,5 @@ export default class LocationModel {
         return {
             key: data[0].ParentCity.Key
         }
-    }        
-}   
+    }
+}
