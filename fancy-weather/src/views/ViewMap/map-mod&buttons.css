@@ -36,6 +36,9 @@ div > button:first-child {
 .lang {    
     margin: 0 5%;
 }
+.location {
+    padding: 5px;
+}
 .temp, .location, .lang {
     display: flex;
 }

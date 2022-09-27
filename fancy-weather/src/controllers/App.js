@@ -10,24 +10,24 @@ import ViewBackgr from "../views/ViewBackground";
 
 export default class App {
     constructor(lang = 'en', temperature = 'true', city) {       
-        this.apiKeyWeather = 'tlagAQvlr2CAxiswgZLb4UPe2JI26L84'; //1st apik tlagAQvlr2CAxiswgZLb4UPe2JI26L84  3d rWbX9EGcJwL0CJbKGCh2zQqOksA9ETj0
+        this.apiKeyWeather = 'rWbX9EGcJwL0CJbKGCh2zQqOksA9ETj0'; //1st apik tlagAQvlr2CAxiswgZLb4UPe2JI26L84  3d rWbX9EGcJwL0CJbKGCh2zQqOksA9ETj0
         //2nd   TXaSpFqw5hyd8SforaGzlbvPqbQNRppX
         this.lang = lang;
-        this.temperature = temperature;   
+        this.temperature = temperature;
         this.city = city;
         
     }
 
     setLang(lang) {
-        this.lang = lang;   
+        this.lang = lang;
     }
 
     setTemp(temperature) {
-        this.temperature = temperature;   
+        this.temperature = temperature;
     }
 
-    setCity(city) {        
-        this.city = city;   
+    setCity(city) {
+        this.city = city;
     }
 
     async start() {  
@@ -56,9 +56,9 @@ export default class App {
 
         const viewMap = new ViewMap(locationData, this.lang);//map model
         const buttonsTemp = new ButtonsTemp(); 
-        const buttonsLanguage = new ButtonsLanguage();  
-        const buttonSearch = new ButtonSearch();    
-        const viewBackgr = new ViewBackgr();                                  
+        const buttonsLanguage = new ButtonsLanguage();
+        const buttonSearch = new ButtonSearch();
+        const viewBackgr = new ViewBackgr();
         
         viewLocation.render();        
         viewWeather.render();

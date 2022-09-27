@@ -13,8 +13,8 @@ export default class LocationModel {
     async getipAdress() {
         const { urlIp } = this.state;
         const response = await fetch(urlIp);
-        if (response.status !== 200) {  
-            alert('Looks like there was a problem with server. Status Code: ' + 
+        if (response.status !== 200) {
+            console.log('Looks like there was a problem with server. Status Code: ' + 
                 response.status);
             return;
         }
@@ -35,6 +35,11 @@ export default class LocationModel {
             return;
         }
         const data = await response.json();
+
+        if (data[0] === undefined) {
+            alert('Looks like you write smth wrong');
+        }
+        
         return LocationModel.getLocationKey(data);
     }
 
@@ -65,24 +70,22 @@ export default class LocationModel {
         }
     }    
 
-    async getLocationByCity(city) {        
+    async getLocationByCity(city) {
         const url = `${this.state.urlByName}?apikey=${this.apiKeyWeather}&q=${city}&language=${this.lang}`;
-        const response = await fetch(url); 
-        console.log(response);
+        const response = await fetch(url);
         
         if (response.status !== 200) {  
             alert('Looks like there was a problem with server. Status Code: ' +  
-                response.status);  
-            return;  
+                response.status);
+            return;
         }
         const data = await response.json();
-        console.log(data);
         return LocationModel.getKeyByCity(data);
     }
 
     static getKeyByCity(data) {
         return {
-            key: data[0].ParentCity.Key
+            key: data[0].Key
         }
     }
 }

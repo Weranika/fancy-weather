@@ -29,7 +29,7 @@ export default class ViewWeather {
 
         const iconToday = document.createElement('div');  
         const iconTodayImg = document.createElement('img');   
-        iconTodayImg.src = `../../src/img/icons/${this.weatherIcon}-s.png`;
+        iconTodayImg.src = `./src/img/icons/${this.weatherIcon}-s.png`;
         iconTodayImg.title="weather image";
         iconTodayImg.classList.add("icon");  
         iconToday.appendChild(iconTodayImg);
@@ -114,7 +114,7 @@ export default class ViewWeather {
 
             const dayIcon = document.createElement('div');  
             const dayIconImg = document.createElement('img');   
-            dayIconImg.src = `../../src/img/icons/${this.futureWeather[i].DayIcon}-s.png`;
+            dayIconImg.src = `./src/img/icons/${this.futureWeather[i].DayIcon}-s.png`;
             dayIconImg.title="weather image";
             dayIconImg.classList.add("day-icon");   
             dayIcon.appendChild(dayIconImg);             

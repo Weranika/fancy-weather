@@ -8,7 +8,7 @@ export default class ViewBackgr {
     changeBackgr(event) { 
         const body = document.getElementById('body');      
         const random = Math.floor(Math.random() * 5) + 1;
-        body.setAttribute("style", `background: url(../../src/img/${random}.jpg) no-repeat fixed; background-attachment: fixed; background-size: cover;`);
+        body.setAttribute("style", `background: url(./src/img/${random}.jpg) no-repeat fixed; background-attachment: fixed; background-size: cover;`);
     }        
 }
 
