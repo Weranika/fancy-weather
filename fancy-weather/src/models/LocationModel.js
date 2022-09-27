@@ -2,9 +2,9 @@ export default class LocationModel {
     constructor(lang, apiKeyWeather) {
         this.state = {
             urlIp: 'https://ipapi.co/json/',
-            urlLocationKey: 'http://dataservice.accuweather.com/locations/v1/cities/ipaddress',    
-            urlLocationData: 'http://dataservice.accuweather.com/locations/v1/',
-            urlByName: 'http://dataservice.accuweather.com/locations/v1/cities/search' 
+            urlLocationKey: 'https://dataservice.accuweather.com/locations/v1/cities/ipaddress',    
+            urlLocationData: 'https://dataservice.accuweather.com/locations/v1/',
+            urlByName: 'https://dataservice.accuweather.com/locations/v1/cities/search' 
         };
         this.lang = lang;
         this.apiKeyWeather = apiKeyWeather;        
